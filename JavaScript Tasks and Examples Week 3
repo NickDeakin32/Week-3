@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Week 3 JavaScript</title>
+</head>
+
+
+<h1>Week 3 JavaScript</h1>
+
+<body>
+
+<h4>The Length Property:</h4>
+<p>This example of the length property:</p>
+
+<p id="myfirststring"></p>
+
+<script>
+let text = "ThisIsATestSentence";
+document.getElementById("myfirststring").innerHTML = text.length;
+</script>
+
+<p>The String length property shows the length of the sentence or string.</p>
+
+<h4>The Slice Method</h4>
+
+<p>The slice method extracts a certain part of string and returns these parts into a new string.</p>
+
+<p id="slicemethod"></p>
+
+<script>
+let str="Skyline, Supra, GTI";
+document.getElementById("slicemethod").innerHTML = str.slice(8,19);
+</script>
+<p>In this example, I have used to slice string method to cut out the word "Skyline" from the string and now the output only shows "Supra" and "GTI"</p>
+
+<h4>The Substring Method</h4>
+<p>This method is similar to the slice method. It extacts a part of a string and returns selected parts</p>
+
+<p id="mysubstring"></p>
+
+<script>
+let str1 = "CPU, GPU, Motherboard";
+document.getElementById("mysubstring").innerHTML = str1.substr(4,17);
+</script>
+
+<h4>The Replace Method</h4>
+<p>The replace method allows for a specified value with another value in a string</p>
+
+<p>When clicked on the button below replaces the text inside.</p>
+
+<button onclick="myFunction3()">Try it</button>
+
+<p id="replaceit">I'll be there in 15 minutes!</p>
+
+<script>
+function myFunction3() {
+  let text = document.getElementById("replaceit").innerHTML;
+  document.getElementById("replaceit").innerHTML =
+  text.replace("15","5");
+}
+</script>
+
+<p> Clicking the button changes the text "15" to "5". </p>
+
+<h4>Number Methods and Properties</h4>
+
+<h4>The toString Method</h4>
+<p> The toString method converts numbers into a string.</p>
+
+<p id="mytoString"></p>
+<script>
+let x = 6789;
+document.getElementById("mytoString").innerHTML =
+  x.toString() + "<br>" +
+   (6789).toString() + "<br>" +
+   (67 + 89).toString();
+</script>
+
+<p>Last line in script adds two numbers together</p>
+
+<h4>The toExponential Method</h4>
+<p>This method returns a string with a number written with exponential notation.This makes this method useful for working with money.</p>
+
+<p id="myexponetial"></p>
+
+<script>
+let x1 = 6.293;
+document.getElementById("myexponetial").innerHTML =
+  x1.toExponential() + "<br>" + 
+  x1.toExponential(4) + "<br>" + 
+  x1.toExponential(3) + "<br>" + 
+  x1.toExponential(2);
+</script>
+
+<h4>The Join Method</h4>
+<p>This method returns an array as a string.</p>
+
+<p id="myjoinarray"></p>
+<script>
+
+const phones = ["iPhone", "Galaxy S21", "Windows Phone", "Nokia"];
+document.getElementById("myjoinarray").innerHTML = phones.join();
+</script>
+
+<h4>The getTime method</h4>
+<p>This command allows to display time in miliseconds since the start of JavaScript's internal clock.</p>
+
+<button onclick="myFunction()">Click to display time!</button>
+
+<p id="mygetTime"></p>
+
+<script>
+function myFunction() {
+  var d = new Date();
+  var n = d.getTime();
+  document.getElementById("mygetTime").innerHTML = n;
+}
+</script>
+
+<h4>The getFullYear Method</h4>
+
+<p>This command displays the current year when a user clicks on the button.</p>
+
+<button onclick="displaytheyear()">What year is it?</button>
+
+<p id="mygetFullYear"></p>
+
+<script>
+function displaytheyear() {
+  var d = new Date();
+  var n = d.getFullYear();
+  document.getElementById("mygetFullYear").innerHTML = n;
+}
+</script>
+
+</body>
+</html>
